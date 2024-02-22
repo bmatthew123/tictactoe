@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Tic Tac Toe</title>
+    <style>
+        tr td {
+            border: 1px solid black;
+        }
+        td {
+            font-size: 48px;
+            text-align: center;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+<h1>Welcome to AI Tic Toe!</h1>
+<h2>{% if winner == 1 %}
+    Congratulations! You win!
+{% elif winner == 2 %}
+    Sorry, better luck next time.
+{% elif winner == 0 %}
+    Looks like it was a tie, keep trying!
+{% else %}
+{% endif %}</h2>
+<form>
+<table>
+    <tr>
+        <td>{% if board[0] == 1 %} X {% elif board[0] == 2 %} O {% else %} <input type="submit" name="0" value="Move Here"/> {% endif %}</td>
+        <td>{% if board[1] == 1 %} X {% elif board[1] == 2 %} O {% else %} <input type="submit" name="1" value="Move Here"/> {% endif %}</td>
+        <td>{% if board[2] == 1 %} X {% elif board[2] == 2 %} O {% else %} <input type="submit" name="2" value="Move Here"/> {% endif %}</td>
+    </tr>
+    <tr>
+        <td>{% if board[3] == 1 %} X {% elif board[3] == 2 %} O {% else %} <input type="submit" name="3" value="Move Here"/> {% endif %}</td>
+        <td>{% if board[4] == 1 %} X {% elif board[4] == 2 %} O {% else %} <input type="submit" name="4" value="Move Here"/> {% endif %}</td>
+        <td>{% if board[5] == 1 %} X {% elif board[5] == 2 %} O {% else %} <input type="submit" name="5" value="Move Here"/> {% endif %}</td>
+    </tr>
+    <tr>
+        <td>{% if board[6] == 1 %} X {% elif board[6] == 2 %} O {% else %} <input type="submit" name="6" value="Move Here"/> {% endif %}</td>
+        <td>{% if board[7] == 1 %} X {% elif board[7] == 2 %} O {% else %} <input type="submit" name="7" value="Move Here"/> {% endif %}</td>
+        <td>{% if board[8] == 1 %} X {% elif board[8] == 2 %} O {% else %} <input type="submit" name="8" value="Move Here"/> {% endif %}</td>
+    </tr>
+</table>
+    <input type="submit" name="reset" value="Reset"/>
+</form>
+
+</body>
+</html>
